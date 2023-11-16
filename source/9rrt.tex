@@ -2,14 +2,151 @@
 
 \subsection{Objectives}
 
+
+
 \subsection{Outline}
 
+Estimated Length: 50 minutes (1 typical class period)
+
 \begin{enumerate}
-    \item Review of Factor Theorem
-    \item Finding Integer Roots
-    \item Rational Roots
+    \item Review Factor Theorem (10 minutes) - Do an exercise that involves the Factor Theorem to get students in the right head space and review the main statement and key application of the theorem.
+    \item Finding Roots In General (10 minutes) - A brief discussion about why we want to find the roots of polynomials, as well as the basic idea behind finding them.
+    \item Integer Roots (10 minutes) - Demonstration
+    \item Rational Roots (20 minutes) - 
 \end{enumerate}
 
 \subsection{Materials}
 
-\section{Content}
+\begin{enumerate}
+    \item Dry Erase Markers (\& Eraser)
+    \item Whiteboard
+\end{enumerate}
+
+Students should also have some paper and writing utensils for notes and scratch work.
+
+
+\newpage
+
+\section{Content \& Instructions}
+
+\setcounter{subsection}{-1}
+
+\subsection{Setup Pre-Lesson}
+
+Before class begins, write up Exercise 2.1 (below) on the whiteboard for students to see when they walk in. This will serve as a warmup exercise for them.
+
+
+
+\subsection{Factor Theorem Review}
+
+We'll begin today with a review of the Factor Theorem from earlier.
+
+\begin{exercise}
+    \label{exc:21}
+    Determine whether $x-a$ is a factor of $f(x)$ for each of the polynomials $f(x)$ and constants $a$ below.
+    \begin{enumerate}[(a)]
+        \item $f(x) = 3x^3 + 2x-4$, $a = 3$
+        \item $f(x) = x^4-2x^3+3x^2-10x+8$, $a = 2$.
+        \item $f(x) = 2x^3 - 2x^2 - 13x + 3$, $a = 3$.
+    \end{enumerate}
+\end{exercise}
+
+After giving students 2 minutes\footnote{not including however many minutes they get to class early; this is factored into the timing.} to work on the exercises, have them compare their solutions with one other student next to them. Emphasize for them to not only compare the ``Yes'' or ``No'' answers, but also the thought processes they took to arrive at them. Allot 2 minutes to this discussion before bringing everyone back together.
+
+Now go over the solution to this exercise part by part, first by asking if anyone would like to share the consensus solution between them and their partner. If they are correct, affirm it and continue on; otherwise correct the mistake. The solution is below.
+
+\textbf{Solution 2.1.} By the \emph{Factor Theorem}, a polynomial $f(x)$ is divisible by $x-a$ if and only if $f(a) = 0$. Therefore one way to check these is to plug in $f(a)$. We have:
+\begin{enumerate}[(a)]
+    \item $f(3) = 3\cdot 3^3 + 2\cdot 3 - 4 = 83 \neq 0$
+    \item $f(2) = 2^4 - 2\cdot 2^3 + 3\cdot 2^2 - 10\cdot 2 + 8 = 0$
+    \item $f(3) = 2\cdot 3^2 - 2\cdot 3^2 - 13\cdot 3 + 3 = 0$
+\end{enumerate} And so the answers are $\boxed{\textbf{No, Yes, Yes}}$.
+
+Another way to do this to simply divide each polynomial by $x-a$. We covered synthetic division recently, so this is also a pretty likely method as it is relevant here. \hspace*{\fill} $\qed$
+
+If only one of these methods is mentioned for the first two parts, encourage the next pair to present a different method to solve the problem. Then close off this section by reminding everyone of the aforementioned Factor Theorem:
+
+\begin{theorem}[Factor Theorem]
+    Let $a$ be a constant and $f$ be a polynomial. Then $x-a$ is a factor of $f(x)$ if and only if $f(a) = 0$.
+\end{theorem}
+
+
+
+\subsection{Finding Roots In General}
+
+We now turn our attention to finding the roots (also called zeros) of polynomials:
+
+\begin{definition}
+    A \textbf{root} of a polynomial $f(x)$ is a number $r$ such that $f(r) = 0$.
+\end{definition}
+
+Here hint at why the Factor Theorem is relevant; if $f(a) = 0$, then we can factor out $x-a$ from $f(x)$ to get a smaller polynomial to work with! In fact, we can generalize this idea as shown below. 
+
+\begin{proposition}
+    If $f(x)$ and $g(x)$ are (nonzero) polynomials such that $g(x)$ is a factor of $f(x)$ and $g(r) = 0$, then $f(r) = 0$ as well.
+\end{proposition}
+
+Before presenting the proof of this, set the students loose to see if they can figure out why this proposition is true. Encourage them to work in small groups while doing so. If they have extra time, ask them to explore whether the converse is true: if every root $r$ of $g$ is also a root of $f$, then is $g$ a factor of $f$?
+
+After about 5 minutes, have students share what they discussed. If no one produces a correct proof or line of reasoning, it is provided below.
+
+\begin{proof}
+    If $g$ is a factor of $f$, then there is a polynomial $q$ such that $f(x) = g(x) q(x)$. Because $g(r)= 0$, we have $f(r) = g(r)\cdot q(r) = 0\cdot q(r) = 0$.
+\end{proof}
+
+Combining this with the Factor Theorem, we see that polynomials can be written as $f(x) = a(x-r_1)(x-r_2)\cdots (x-r_n)$, where $r_1$, $r_2$, $\dots$, $r_n$ are the roots of $f$. We will see this in action shortly, but the rough idea why this works is that we can repeatedly divide out $x-r$ whenever we find a new root $r$ without losing any of the remaining ones.
+
+One more question for the group before diving into the methodology:
+
+\begin{ques}
+    Why do we care about finding the roots of polynomials, or any function?
+\end{ques}
+
+There isn't exactly a correct answer to this, but this is a good opportunity to mention some real situations where this is relevant. Polynomials are especially useful for modeling, as many structures have curves similar to graphs of polynomials. 
+
+For one specific example, let's say a roller coaster follows a curve $h(t)$, where $h$ is the height above the ground after $t$ seconds. We may need to know, for example, how long into the ride the roller coaster reaches its highest point, or how much time it takes the roller coaster to complete its biggest drop. All of these involve solving an equation of the form $h(t) = k$ where $k$ is a constant, which is the same as finding the roots of $h(t)-k$.
+
+
+
+\subsection{Integer Roots}
+
+Now that we've set up the eventual task of finding the roots of a polynomial, let's actually do it. Propose the following problem to work on in small groups, and remind students that once they find a root $r$, they can use synthetic division to get an easier polynomial to work with by factoring out $x-r$.
+
+\begin{example}
+    Find the roots of the polynomial $f(x) = x^3+x^2-21x-45$. Hint: all the zeros of $f$ are integers.
+\end{example}
+
+\textbf{Solution 2.6.} The answer is $-3$ (double root) and $5$. As of now, all we can really do is brute force, so with enough trying, we'll find them. Eventually, you'll find $x = -3$ (for example), and divide to get $f(x) = (x+3)(x^2-2x-15)$. We know how to factor qudaratics already: $f(x) = (x+3)(x+3)(x-5)$. Thus by the zero property, the roots are $-3$ and $5$. \hspace*{\fill} $\qed$
+
+This is a good point to ask how they approached doing the trial-and-error. There are a few observations to hit here, and ask leading questions towards these if they are not.
+
+\begin{enumerate}
+    \item $f(0)$, $f(1)$, and $f(-1)$ are quite easy to calculate.
+    \item If $r$ is even, then $f(r)$ must be odd, so it can't be zero!
+    \item In fact, if $r$ is not a factor of $45$, $f(r)$ can't be zero either.
+\end{enumerate}
+
+This last point requires a bit more explanation, which we walk through on the board:
+\begin{proof}
+    Suppose that $f(r) = 0$, so $r^3+r^2-21r+45 = 0$. This means that $-45 = r^3+r^2-21r$. 
+    
+    Obviously $r \neq 0$, as this would imply $45 = 0$, so we are allowed to divide by $r$. This means $\frac{-45}{r} = r^3+r^2-21r$. Now $r$ is an integer, so the righthand side is an integer. This means that $\frac{-45}{r}$ must be an integer, so $r$ is a factor of $45$.
+
+    On the contrapositive, if $r$ is \emph{not} a factor of $45$, then $f(r) \neq 0$.
+\end{proof}
+
+This greatly narrows our search; we only need to check the integers which are factors of $45$ (and zero).
+
+One last point to make, and really it is just a definition:
+
+\begin{definition}
+    The \textbf{multiplicity} of a root $r$ is the number of times it is the root of a polynomial. Put another way, if a polynomial $f(x)$ can be written as $(x-r_1)(x-r_2)\cdots (x-r_n)$, the multiplicity of $r$ is the number of $r_k$ equal to $r$.
+\end{definition}
+
+So in our previous example, $-3$ had multplicity $2$ because $f(x) = (x+3)(x+3)(x-5)$, but $5$ had multiplicity $1$.
+
+\subsection{The Rational Root Theorem}
+
+\section{Problems}
+
+These are some exercises and problems that students can think about further (as homework), arranged in roughly increasing difficulty.

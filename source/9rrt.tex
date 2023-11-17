@@ -2,7 +2,15 @@
 
 \subsection{Objectives}
 
+Students will be able to:
 
+\begin{itemize}
+    \item define what a root of a polynomial is
+    \item explain where the results of the Factor and Rational Root Theorems arise from
+    \item classify which integers and rational numbers can possibly be roots of a polynomial 
+\end{itemize}
+
+Students are NOT expected to have mastered finding roots of polynomials after this lesson. There should be more time given in future lessons and homework to practice and expand on this skill; this lesson is moreso an overview.
 
 \subsection{Outline}
 
@@ -11,16 +19,17 @@ Estimated Length: 50 minutes (1 typical class period)
 \begin{enumerate}
     \item Review Factor Theorem (10 minutes) - Do an exercise that involves the Factor Theorem to get students in the right head space and review the main statement and key application of the theorem.
     \item Finding Roots In General (10 minutes) - A brief discussion about why we want to find the roots of polynomials, as well as the basic idea behind finding them.
-    \item Integer Roots (10 minutes) - Demonstration
-    \item Rational Roots (20 minutes) - 
+    \item Integer Roots (10 minutes) - Theory and practice finding integer roots of polynomials
+    \item Rational Roots (20 minutes) - Expanding what we learned with integers to rationals
 \end{enumerate}
 
 \subsection{Materials}
 
-\begin{enumerate}
+\begin{itemize}
     \item Dry Erase Markers (\& Eraser)
     \item Whiteboard
-\end{enumerate}
+    \item Copies of the problem set at the end for the whole class
+\end{itemize}
 
 Students should also have some paper and writing utensils for notes and scratch work.
 
@@ -29,17 +38,11 @@ Students should also have some paper and writing utensils for notes and scratch 
 
 \section{Content \& Instructions}
 
-\setcounter{subsection}{-1}
-
-\subsection{Setup Pre-Lesson}
-
-Before class begins, write up Exercise 2.1 (below) on the whiteboard for students to see when they walk in. This will serve as a warmup exercise for them.
-
-
+Before class begins, write Exercise 2.1 (below) on the whiteboard for students to see when they walk in.
 
 \subsection{Factor Theorem Review}
 
-We'll begin today with a review of the Factor Theorem from earlier.
+We'll begin today with a review of the Factor Theorem from earlier\footnote{This section is an example of \textbf{orienting}, which involves setting up the current lesson by reviewing the previous day's lesson and providing a target that we will aim to hit today.}.
 
 \begin{exercise}
     \label{exc:21}
@@ -51,7 +54,7 @@ We'll begin today with a review of the Factor Theorem from earlier.
     \end{enumerate}
 \end{exercise}
 
-After giving students 2 minutes\footnote{not including however many minutes they get to class early; this is factored into the timing.} to work on the exercises, have them compare their solutions with one other student next to them. Emphasize for them to not only compare the ``Yes'' or ``No'' answers, but also the thought processes they took to arrive at them. Allot 2 minutes to this discussion before bringing everyone back together.
+After giving students 2 minutes to work on the exercises, have them compare their solutions with one other student next to them. Emphasize for them to not only compare the ``Yes'' or ``No'' answers, but also the thought processes they took to arrive at them. Allot 2 minutes to this discussion before bringing everyone back together.
 
 Now go over the solution to this exercise part by part, first by asking if anyone would like to share the consensus solution between them and their partner. If they are correct, affirm it and continue on; otherwise correct the mistake. The solution is below.
 
@@ -104,21 +107,23 @@ One more question for the group before diving into the methodology:
 
 There isn't exactly a correct answer to this, but this is a good opportunity to mention some real situations where this is relevant. Polynomials are especially useful for modeling, as many structures have curves similar to graphs of polynomials. 
 
-For one specific example, let's say a roller coaster follows a curve $h(t)$, where $h$ is the height above the ground after $t$ seconds. We may need to know, for example, how long into the ride the roller coaster reaches its highest point, or how much time it takes the roller coaster to complete its biggest drop. All of these involve solving an equation of the form $h(t) = k$ where $k$ is a constant, which is the same as finding the roots of $h(t)-k$.
+For one specific example, let's say a roller coaster follows a curve $h(t)$, where $h$ is the height above the ground after $t$ seconds. We may need to know, for example, how long into the ride the roller coaster reaches its highest point, or how much time it takes the roller coaster to complete its biggest drop. All of these involve solving an equation of the form $h(t) = k$ where $k$ is a constant, which is the same as finding the roots of $h(t)-k$.\footnote{We do this discussion to target the \textbf{affective domain} of Bloom's Taxonomy; the aim is to give this lesson some sort of \emph{value} to help students feel a little more emotionally invested.}
 
 
 
 \subsection{Integer Roots}
 
-Now that we've set up the eventual task of finding the roots of a polynomial, let's actually do it. Propose the following problem to work on in small groups, and remind students that once they find a root $r$, they can use synthetic division to get an easier polynomial to work with by factoring out $x-r$.
+Now that we've set up the eventual task of finding the roots of a polynomial, let's actually do it. Propose the following problem to work on in small groups\footnote{Most of these problems are presented to be worked on in small groups, utilizing \textbf{collaborative learning}, where students work together to, in this case, solve a problem to synthesize and build on one another's knowledge and understanding.}, and remind students that once they find a root $r$, they can use synthetic division to get an easier polynomial to work with by factoring out $x-r$.
 
 \begin{example}
     Find the roots of the polynomial $f(x) = x^3+x^2-21x-45$. Hint: all the zeros of $f$ are integers.
 \end{example}
 
-\textbf{Solution 2.6.} The answer is $-3$ (double root) and $5$. As of now, all we can really do is brute force, so with enough trying, we'll find them. Eventually, you'll find $x = -3$ (for example), and divide to get $f(x) = (x+3)(x^2-2x-15)$. We know how to factor qudaratics already: $f(x) = (x+3)(x+3)(x-5)$. Thus by the zero property, the roots are $-3$ and $5$. \hspace*{\fill} $\qed$
+\textbf{Solution 2.6.} The answer is $-3$ (double root) and $5$. 
 
-This is a good point to ask how they approached doing the trial-and-error. There are a few observations to hit here, and ask leading questions towards these if they are not.
+As of now, all we can really do is brute force, so with enough trying, we'll find them. Eventually, you'll find $x = -3$ (for example), and divide to get $f(x) = (x+3)(x^2-2x-15)$. We know how to factor qudaratics already: $f(x) = (x+3)(x+3)(x-5)$. Thus by the zero property, the roots are $-3$ and $5$. \hspace*{\fill} $\qed$
+
+This is a good point to ask how they approached doing the trial-and-error\footnote{Discussions such as these are implemented with the \textbf{constructivist approach} to mathematical teaching in mind. By asking students how they solved a problem and guiding them towards discovering more general facts rather than imposing one correct method, they have the opportunity to think creatively and develop their problem-solving skills.}. There are a few observations to aim for here, and ask leading questions towards these if they are not.
 
 \begin{enumerate}
     \item $f(0)$, $f(1)$, and $f(-1)$ are quite easy to calculate.
@@ -128,14 +133,14 @@ This is a good point to ask how they approached doing the trial-and-error. There
 
 This last point requires a bit more explanation, which we walk through on the board:
 \begin{proof}
-    Suppose that $f(r) = 0$, so $r^3+r^2-21r+45 = 0$. This means that $-45 = r^3+r^2-21r$. 
+    Suppose that $f(r) = 0$, so $r^3+r^2-21r+45 = 0$, or $-45 = r^3+r^2-21r$. 
     
     Obviously $r \neq 0$, as this would imply $45 = 0$, so we are allowed to divide by $r$. This means $\frac{-45}{r} = r^3+r^2-21r$. Now $r$ is an integer, so the righthand side is an integer. This means that $\frac{-45}{r}$ must be an integer, so $r$ is a factor of $45$.
 
     On the contrapositive, if $r$ is \emph{not} a factor of $45$, then $f(r) \neq 0$.
 \end{proof}
 
-This greatly narrows our search; we only need to check the integers which are factors of $45$ (and zero).
+This greatly narrows our search; we only need to check the integers which are factors of $45$ (and zero). We will see this idea again shortly with the Rational Root Theorem.
 
 One last point to make, and really it is just a definition:
 
@@ -145,8 +150,90 @@ One last point to make, and really it is just a definition:
 
 So in our previous example, $-3$ had multplicity $2$ because $f(x) = (x+3)(x+3)(x-5)$, but $5$ had multiplicity $1$.
 
+
+
 \subsection{The Rational Root Theorem}
+
+We now have integer roots in our toolbelt, so we expand to all rational roots. This is a good time to check in that we remember what rational numbers are:
+
+\begin{definition}
+    A \textbf{rational number} is a number of the form $\frac{p}{q}$, where $p$ and $q$ are integers and $q\neq 0$.
+\end{definition}
+
+Now we do a sample problem for groupwork first; similar protocol to before.
+
+\begin{example}
+    Find the roots of the polynomial $f(x) = 12x^3+8x^2-47x+20$.
+\end{example}
+
+\textbf{Solution 2.9.} The answer is $\frac12$, $\frac43$, and $-\frac52$. We will go over the solution more in depth in the discussion below. \hspace{\fill} $\qed$
+
+As before, ask students how they approached this example and be prepared to walk through it. These are the main points we want to hit eventually:
+
+\begin{enumerate}
+    \item $f(0) = 12$ and $f(1) = -7$, so there is a root between $0$ and $1$ as $f$ crosses zero.
+    \item None of the factors of 12 work! This implies that the roots are not integers.
+\end{enumerate}
+
+These lines of reasoning lead us to try rational roots. So suppose that $r = \frac{p}{q}$ was a root of $f$ such that $p$ and $q$ are relatively prime (that is, they share no common factors). Our goal now will be to deduce anything we can about $p$ and $q$. Let's plug it in:
+\begin{align*}
+    f\left(\frac{p}{q}\right) = 12\left(\frac{p}{q}\right)^3 + 8\left(\frac{p}{q}\right)^2 - 47\left(\frac{p}{q}\right) + 20 = 0
+\end{align*}
+
+Now $q$ can't be zero, so we can multiply through by $q^3$:
+\begin{align*}
+    12p^3 + 8p^2q - 47pq^2 + 20q^3 = 0.
+\end{align*}
+
+Now let's do what we did before and isolate one of the terms on the ends. We have:
+\begin{align*}
+    12p^3 &= -8p^2q - 47pq^2 + 20q^3\\
+        &= q(-8p^2-47pq+20q^2).
+\end{align*}
+This would imply that $\frac{12p^3}{q} = -8p^2-47pq + 20q^2$; in particular it is an integer. For the lefthand side to be an integer, $q$ must be a factor of $12$. Make this claim, and ask the class to try an justify this. (It's because $q$ can't divide $p^3$ since they're relatively prime!)
+
+Now have students work out the other side of this: isolate $20q^3$ this time and work out a similar restriction on $p$ (they should find that $p$ must be a factor of $20$). When they finish, have them work out all the possible rational numbers $\frac{p}{q}$ that could possibly be roots of $f$.
+
+By listing out factors of $12$ and $20$, we get (the notation here is just the list of possible numerators on top and denominators on the bottom):
+\begin{align*}
+    \frac{\pm 1,\, \pm 2,\, \pm 3,\, \pm 4,\, \pm 6,\, \pm 12}{\pm 1,\, \pm 2,\, \pm 4,\, \pm 5,\, \pm 10,\, \pm 20}.
+\end{align*}
+
+By roughly the same processes as above, one could prove the general Rational Root Theorem, which we can just state now as we have an idea as to why it works.
+\begin{theorem}[Rational Root Theorem]
+    Let $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a polynomial with integer coefficients such that both $a_n$ and $a_0$ are not zero. If $\frac{p}{q}$ is a fraction in simplest terms and $f\left(\frac{p}{q}\right) = 0$, then $p$ is a factor of $a_0$ and $q$ is a factor of $a_n$.
+\end{theorem}
+
+This is a pretty good place to stop and look at the practice exercises now.
+
+\newpage
+
+
 
 \section{Problems}
 
-These are some exercises and problems that students can think about further (as homework), arranged in roughly increasing difficulty.
+These are some exercises and problems that students can think about further (as homework). A printable version of these exercises to pass out is available \href{INSERT LINK HERE}{here}.
+
+\begin{exercise}
+    Find all the roots of the following polynomials:
+    \begin{enumerate}[(a)]
+        \item $f(x) = 2x^4-6x^3-12x^2+16x$
+        \item $g(t) = t^5+t^4-6t^3-14t^2-11t-3$
+        \item $h(y) = 30y^3+11y^2-4y-1$
+        \item $p(x) = 25x^4+55x^3-192x^2-44x+16$ 
+        
+        (You may want to use a calculator for this last one.)
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Without trying to find its roots, explain why the polynomial $f(x) = 3x^4 + 5x^3 + 7x^2 + 4$ has no positive roots.
+\end{exercise}
+
+\begin{exercise}
+    Consider the polynomial $f(x) = x^4 - 12x^3 + 54x^2 - 108x + 81$. Notice that $f(3) = 0$, but no other factor of $81$ is a root of $f$. Would it be correct to assume that $f$ has no other integer (or rational) roots? Why or why not?
+\end{exercise}
+
+\begin{exercise}
+    Let $f(x) = 6x^3+25x^2+2x-8$. Find the quotient and remainder when dividing $f$ by $x-1$. Explain how the result you get shows that there are no roots of $f$ greater than $1$. Then, find all the roots of $f$.
+\end{exercise}

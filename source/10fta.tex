@@ -2,7 +2,21 @@
 
 \subsection{Objectives}
 
+Students will be able to:
+\begin{itemize}
+    \item Evaluate whether two polynomials are the same with limited information
+    \item Collaborate to solve problems using information they recently learned
+    \item Explain the Fundamental Theorem of Algebra and some of its uses
+\end{itemize}
+
 \subsection{Outline}
+
+\begin{enumerate}
+    \item Guess the Polynomial Activity (20 minutes)
+    \item The Theorem Itself (5 minutes)
+    \item Solving Guess the Polynomial (10 minutes)
+    \item Problem Solving Time (15 minutes)
+\end{enumerate}
 
 \subsection{Background}
 
@@ -17,4 +31,89 @@ This lesson relies heavily on the previous lessons, so we summarize the relevant
 
 \subsection{Materials}
 
-\section{Content}
+\begin{itemize}
+    \item Whiteboard
+    \item Dry Erase Markers
+    \item Lots of scratch paper and writing utensils for said paper
+\end{itemize}
+
+\section{Content \& Instructions}
+
+\subsection{Guess the Polynomial}
+
+We'll start class with an activity that should take about 20 minutes in total, which is ``Guess the Polynomial'':
+\begin{enumerate}
+    \item Have students split into pairs (we can assign or just have them turn to the person next to them).
+    \item Within each pair, have one student make up a random polynomial. This student will be the ``Creator''. At first, don't make any restrictions onto what polynomials they can choose.
+    \item Have the Creators evaluate their polynomials at $x = 0$, $1$, $2$, and $3$ and share the results to their partners, the ``Guessers''. 
+    \item The Guessers will now try to make a polynomial that satisfies the values the Creator provides. If they guess the right polynomial, congratulations! If not, try again.
+\end{enumerate}
+
+Let this stage play out for about 5 minutes; it is meant to be very difficult, so encourage students if they feel that guessing is too hard. As students are doing this, encourage them to note down how they are finding polynomials.
+
+After 5 minutes, we move on to a different stage of this game. Now instead of the Creators being able to pick any polynomial, they must pick a cubic polynomial of the form $ax^3+bx^2+cx+d$. Repeat everything else the same way, and ask the Guessers to see if they can figure out the polynomials. If they can, have the pairs swap roles and see if they can still figure it out with new numbers.
+
+After another 10 minutes on this new variation, bring the group back together and ask what everyone thought about the game. Some possible questions to start off are: ``Did anyone guess the right polynomial in the first version?'' and ``Why was the second version of the game easier than the first?'' (or if someone disagrees, why did they think the first version was easier?)\footnote{These instructions asks students to apply \textbf{metacognition} to think about their own thinking processes. Doing so helps them reflect on their reasoning, understanding what they did at a deeper level and filling in gaps they missed.}
+
+The idea is that with the degree restriction, we obtain a system of equations that is solvable by substituting in $x=0$, $1$, $2$, $3$. This gives four linear equations for four variables (one of them is just $d = d$), which should have a solution!
+
+\subsection{The Theorem}
+
+Let's see if we can solidify this idea\footnote{This section mostly uses \textbf{direct instruction}, in that the teacher directs exactly what is being done and discussed for this section. This is probably the most ``\textbf{lecture}''-ish part of the lesson, during which the teacher talks directly to students about a topic and students are meant to learn by listening and watching. To keep attention, this section is relatively short, and the key theorem can be written using a big blue box to make it clear that it is important!}. Call back to the fact from last lesson that a polynomial $f(x)$ can be written as $a(x-r_1)(x-r_2)\cdots (x-r_n)$, where $r_1$, $r_2$, $\dots$, $r_n$ are the roots of $f$. Ask what the degree of $f$ would be then? (It's $n$). 
+
+Now make note that if $f$ had $n+1$ roots, its degree would have to be $n+1$, as multiplying out the linear factors from earlier would result in a $x^{n+1}$ term. Therefore no polynomials that have degree $n$ can have more than $n$ roots.
+
+This leads us to the \textbf{Fundamental Theorem of Algebra}:
+\begin{theorem}[Fundamental Theorem of Algebra]
+    If $f$ is a one-variable polynomial and $\deg f = n$, then $f$ has exactly $n$ roots, counting multiple roots as multiple and not one.
+\end{theorem}
+
+Note that these roots need not be rational, or even real for that matter. We will abbreviate this moving forward as \textbf{FTA}.
+
+We are now ready to tackle Guess the Polynomial, but in general.
+
+\subsection{Solving Guess the Polynomial}
+
+Now there is one ``exception'' to the Fundamental Theorem (``exception'' in quotes because it hardly counts), and that is the polynomial $f(x) = 0$. What FTA then tells us is that if $f(x) = 0$ for $n+1$ values of $x$ while supposedly being a degree $n$ polynomial, it must just be the zero polynomial (as otherwise it would violate FTA!).
+
+We'll now work to solve a small case of Guess the Polynomial using FTA now. Break up students into small groups to work together on this one. Allow for at least 5 minutes for this; it can be a bit tricky. If they finish early, have them begin to work on the general case: if $P(x)$ and $Q(x)$ are polynomials of degree at most $n$, show that if $P(x) = Q(x)$ for at least $n+1$ values of $x$, then $P(x) = Q(x)$ for all $x$.
+\begin{example}
+    Suppose that $f(x)$ is a cubic polynomial, and that $f(1) = 1$, $f(2) = 8$, $f(3) = 27$, and $f(4) = 64$. Explain why $f(x) = x^3$ using FTA.
+\end{example}
+\begin{proof}
+    The trick here is to think about $f(x) - x^3 = 0$, as that way we are examining roots. Let $g(x) = f(x) - x^3$. Then $\deg g \ge 3$, as it is a cubic minus another cubic.
+
+    By FTA, $g$ must have at most $3$ roots. However, $1$, $2$, $3$, and $4$ are all roots of $g$ by the given information, so $g$ must be the zero polynomial. Therefore $f(x) - x^3 = 0$ for all $x$, so $f(x) = x^3$.
+\end{proof}
+
+When we bring everyone together, have some students share what they came up with. There are many ways to think about this explanation, so allow for students to voice their entire thought process. Usually, they'll say something similar to the one provided here, but they might use different words, or explicitly write out $g(x) = (x-1)(x-2)(x-3)(x-4)h(x)$, or so on. These are all totally fine and correct\footnote{This comment uses \textbf{pedagogical content knowledge} in particular, pointing out what students are likely to think or try in this situation and noting how we can respond to it (in this case, positively). This considers how what we teach can be perceived by students, which affects how we should teach it.}!
+
+The general version of this problem is very similar, so we end off this section with it without proof. We just did the specific case of $P = f(x)$ and $Q = x^3$.
+\begin{theorem}[Identity Theorem]
+    If $P(x)$ and $Q(x)$ are polynomials of degree at most $n$ and $P(x) = Q(x)$ for at least $n+1$ values of $x$, then $P(x) = Q(x)$ for all $x$.
+\end{theorem}
+
+\subsection{Problems}
+
+The rest of this lesson can be dedicated to problem solving\footnote{These problems are chosen to be challenging and require application of the concepts we covered earlier in the lesson. This is an example of \textbf{elaboration}, adding on and using concepts to commit them more deeply to memory.}. Write the problems below on the board with space below them for students to write solutions on the board. Divide the class into groups to work on them with each group focusing on one problem first. Emphasize to students to focus on the reasoning they used to arrive at their answers, not just the answers themselves.
+
+\begin{problem}
+    Suppose that $f$ is a polynomial with degree $n$. Show that the graphs $y = f(x)$ and $y = c$ have at most $n$ intersections, where $c$ is a constant.
+\end{problem}
+
+\begin{problem}
+    Suppose that $f$ is a quartic (degree $4$) polynomial for which $f(-1) = 0$, $f(1) = 0$, $f(2) = 15$, $f(3) = 80$, and $f(4) = 255$. What polynomial(s) could $f$ be?
+\end{problem}
+
+\begin{problem}
+    Solve the system of equations below:
+    \begin{eqnarray*}
+        a+b+c &=& 1\\
+        4a+2b+c &=& 8\\
+        9a+3b+c &=& 27
+    \end{eqnarray*}
+\end{problem}
+
+\begin{problem}
+    Let $f$ be a polynomial with degree $n$ such that $f(0) = f(1) = \cdots = f(n-1) = 1$ and $f(n) = 0$. What is $f(n+1)$?
+\end{problem}

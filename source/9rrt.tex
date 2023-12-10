@@ -62,7 +62,7 @@ After giving students 2 minutes to work on the exercises, have them compare thei
 
 Now go over the solution to this exercise part by part, first by asking if anyone would like to share the consensus solution between them and their partner. If they are correct, affirm it and continue on; otherwise correct the mistake. The solution is below.
 
-\textbf{Solution 2.1.} By the \emph{Factor Theorem}, a polynomial $f(x)$ is divisible by $x-a$ if and only if $f(a) = 0$. Therefore one way to check these is to plug in $f(a)$. We have:
+\textbf{Solution 9.2.1.} By the \emph{Factor Theorem}, a polynomial $f(x)$ is divisible by $x-a$ if and only if $f(a) = 0$. Therefore one way to check these is to plug in $f(a)$. We have:
 \begin{enumerate}[(a)]
     \item $f(3) = 3\cdot 3^3 + 2\cdot 3 - 4 = 83 \neq 0$
     \item $f(2) = 2^4 - 2\cdot 2^3 + 3\cdot 2^2 - 10\cdot 2 + 8 = 0$
@@ -196,7 +196,7 @@ Now let's do what we did before and isolate one of the terms on the ends. We hav
 \end{align*}
 This would imply that $\frac{12p^3}{q} = -8p^2-47pq + 20q^2$; in particular it is an integer. For the lefthand side to be an integer, $q$ must be a factor of $12$. Make this claim, and ask the class to try an justify this. (It's because $q$ can't divide $p^3$ since they're relatively prime!)
 
-Now have students work out the other side of this: isolate $20q^3$ this time and work out a similar restriction on $p$ (they should find that $p$ must be a factor of $20$). When they finish, have them work out all the possible rational numbers $\frac{p}{q}$ that could possibly be roots of $f$.
+Now have students work out the other side: isolate $20q^3$ and work out a similar restriction on $p$ (they should find that $p$ must be a factor of $20$). When they finish, have them work out all the possible rational numbers $\frac{p}{q}$ that could possibly be roots of $f$.
 
 By listing out factors of $12$ and $20$, we get (the notation here is just the list of possible numerators on top and denominators on the bottom):
 \begin{align*}
@@ -208,17 +208,11 @@ By roughly the same processes as above, one could prove the general Rational Roo
     Let $f(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0$ be a polynomial with integer coefficients such that both $a_n$ and $a_0$ are not zero. If $\frac{p}{q}$ is a fraction in simplest terms and $f\left(\frac{p}{q}\right) = 0$, then $p$ is a factor of $a_0$ and $q$ is a factor of $a_n$.
 \end{theorem}
 
-This is a pretty good place to stop and look at the practice exercises now.
-
-\newpage
-
-
-
 \section{Problems}
 
 These are some exercises and problems that students can think about further (as homework). A printable version of these exercises to pass out is available \href{https://github.com/KlebbtheKlari/EPSY-201-Lesson-Plans/blob/main/extra/9pset.pdf}{here}.
 
-\begin{exercise}
+\begin{problem}
     Find all the roots of the following polynomials:
     \begin{enumerate}[(a)]
         \item $f(x) = 2x^4-6x^3-12x^2+16x$
@@ -228,16 +222,16 @@ These are some exercises and problems that students can think about further (as 
         
         (You may want to use a calculator for this last one.)
     \end{enumerate}
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
     Without trying to find its roots, explain why the polynomial $f(x) = 3x^4 + 5x^3 + 7x^2 + 4$ has no positive roots.
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
     Consider the polynomial $f(x) = x^4 - 12x^3 + 54x^2 - 108x + 81$. Notice that $f(3) = 0$, but no other factor of $81$ is a root of $f$. Would it be correct to assume that $f$ has no other integer (or rational) roots? Why or why not?
-\end{exercise}
+\end{problem}
 
-\begin{exercise}
+\begin{problem}
     Let $f(x) = 6x^3+25x^2+2x-8$. Find the quotient and remainder when dividing $f$ by $x-1$. Explain how the result you get shows that there are no roots of $f$ greater than $1$. Then, find all the roots of $f$.
-\end{exercise}
+\end{problem}
